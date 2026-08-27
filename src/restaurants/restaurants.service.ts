@@ -1,3 +1,5 @@
+import { eq } from 'drizzle-orm';
+
 import { Injectable, Inject } from '@nestjs/common';
 import { CreateRestaurantDto } from './dto/create-restaurant.dto';
 import { UpdateRestaurantDto } from './dto/update-restaurant.dto';
@@ -16,6 +18,13 @@ export class RestaurantsService {
 
   create(createRestaurantDto: CreateRestaurantDto) {
     return 'This action adds a new restaurant';
+  }
+
+  async findByRestaurant(restaurantId: string) {
+  return this.db
+    .select()
+    .from(schema.meals)
+    .where(eq(schema.meals.restaurant_id, restaurantId));
   }
 
   async findAll() {

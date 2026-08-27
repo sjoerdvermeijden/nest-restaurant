@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { RestaurantsService } from './restaurants.service';
+import { MealsService } from '../meals/meals.service';
 import { CreateRestaurantDto } from './dto/create-restaurant.dto';
 import { UpdateRestaurantDto } from './dto/update-restaurant.dto';
 
@@ -10,6 +11,11 @@ export class RestaurantsController {
   @Post()
   create(@Body() createRestaurantDto: CreateRestaurantDto) {
     return this.restaurantsService.create(createRestaurantDto);
+  }
+
+  @Get(':restaurantId/meals')
+  findByRestaurant(@Param('restaurantId') restaurantId: string) {
+    return this.restaurantsService.findByRestaurant(restaurantId);
   }
 
   @Get()

@@ -4,7 +4,9 @@ import { UpdateMealDto } from './dto/update-meal.dto';
 
 @Controller('meals')
 export class MealsController {
-  constructor(private readonly mealsService: MealsService) { }
+  constructor(private readonly mealsService: MealsService) {}
+
+  
 
   @Get()
   findAll() {

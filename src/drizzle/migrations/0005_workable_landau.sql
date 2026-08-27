@@ -1,2 +1,2 @@
-ALTER TABLE "meals" ALTER COLUMN "restaurant_id" SET DATA TYPE uuid;--> statement-breakpoint
+ALTER TABLE "meals" ALTER COLUMN "restaurant_id" SET DATA TYPE uuid USING "restaurant_id"::text::uuid;--> statement-breakpoint
 ALTER TABLE "meals" ADD CONSTRAINT "meals_restaurant_id_restaurants_id_fk" FOREIGN KEY ("restaurant_id") REFERENCES "public"."restaurants"("id") ON DELETE no action ON UPDATE no action;
