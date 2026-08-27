@@ -35,3 +35,10 @@ export const usersRelations = relations(users, ({ one }) => ({
     references: [user_role.id],
   }),
 }));
+
+export const mealRelations = relations(meals, ({ one }) => ({
+  restaurant: one(restaurants, {
+    fields: [meals.restaurant_id],
+    references: [restaurants.id],
+  }),
+}));

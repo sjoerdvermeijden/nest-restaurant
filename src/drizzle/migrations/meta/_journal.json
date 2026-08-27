@@ -29,6 +29,20 @@
       "when": 1786169442056,
       "tag": "0003_bright_slipstream",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1787815700795,
+      "tag": "0004_stormy_crystal",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1787819027154,
+      "tag": "0005_workable_landau",
+      "breakpoints": true
     }
   ]
 }
