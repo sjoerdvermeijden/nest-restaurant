@@ -15,6 +15,7 @@ export const meals = pgTable('meals', {
   title: text('title'),
   price: integer(),
   short_description: text(),
+  restaurant_id: integer('restaurant_id'),
 });
 
 export const users = pgTable('users', {
