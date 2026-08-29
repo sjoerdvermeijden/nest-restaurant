@@ -1,5 +1,5 @@
 export class RestaurantDto {
-  id?: number;
+  id?: string;
   name?: string;
   adress?: string;
   delivery_time?: number;
