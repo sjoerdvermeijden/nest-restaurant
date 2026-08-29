@@ -16,10 +16,6 @@ export class RestaurantsService {
     private db: NodePgDatabase<typeof schema>,
   ) {}
 
-  create(createRestaurantDto: CreateRestaurantDto) {
-    return 'This action adds a new restaurant';
-  }
-
   async findByRestaurant(restaurantId: string) {
   return this.db
     .select()
@@ -34,10 +30,6 @@ export class RestaurantsService {
 
   findOne(id: number) {
     return `This action returns a #${id} restaurant`;
-  }
-
-  update(id: number, updateRestaurantDto: UpdateRestaurantDto) {
-    return `This action updates a #${id} restaurant`;
   }
 
   remove(id: number) {
